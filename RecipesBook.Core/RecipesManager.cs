@@ -11,8 +11,6 @@ namespace RecipesBook.Core
 {
     public class RecipesManager : IRecipesManager
     {
-        const string accountURL = @"https://recipes-app-db.documents.azure.com:443/";
-        const string accountKey = @"Xkbdt6vrigPId3Lb97kKNptjlJpHmfjsV7wwll81npFXqX3BO25ZMK6Di7v2XDr1pOSD74kDPToTOa1lSWzzSw==";
         const string databaseId = @"RecipesDB";
         const string collectionId = @"Recipes";
 
@@ -22,7 +20,7 @@ namespace RecipesBook.Core
 
         public RecipesManager()
         {
-            client = new DocumentClient(new System.Uri(accountURL), accountKey);
+            client = new DocumentClient(new System.Uri(ApiKeys.accountURL), ApiKeys.accountKey);
         }
 
         public List<Recipe> Recipes { get; private set; }
