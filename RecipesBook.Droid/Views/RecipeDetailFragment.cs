@@ -37,9 +37,10 @@ namespace RecipesBook.Droid.Views
 
             return view;
         }
-        public override void OnDestroy()
+
+        public override void OnDetach()
         {
-            base.OnDestroy();
+            base.OnDetach();
             Activity.Title = "Recipes";
         }
     }
