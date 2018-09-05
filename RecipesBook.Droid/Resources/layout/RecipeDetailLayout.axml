@@ -105,7 +105,7 @@
                 local:MvxBind="Text IngredientsText"
                 android:id="@+id/ingridientsList"
                 android:layout_below="@id/ingridients"
-                android:textColor="#AD313C"
+                android:textColor="#FFFFFF"
                 android:textSize="16dp"
                 android:textStyle="normal" />
             <TextView
@@ -124,7 +124,7 @@
                 android:layout_margin="8dp"
                 local:MvxBind="Text Method"
                 android:layout_below="@id/method"
-                android:textColor="#AD313C"
+                android:textColor="#FFFFFF"
                 android:textSize="16dp"
                 android:textStyle="normal" />
         </RelativeLayout>
