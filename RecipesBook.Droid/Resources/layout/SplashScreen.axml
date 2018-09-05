@@ -18,5 +18,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Recipes Book"
-        android:layout_margin="20dp" />
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:textColor="#AD313C"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 </LinearLayout>
