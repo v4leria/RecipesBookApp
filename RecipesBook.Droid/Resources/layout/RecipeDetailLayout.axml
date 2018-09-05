@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        local:cardBackgroundColor="@android:color/white"
+        local:cardCornerRadius="0dp"
+        local:cardElevation="1dp">
+        <ffimageloading.cross.MvxCachedImageView
+            android:id="@+id/recipe_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:cropToPadding="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            local:MvxBind="ImagePath ImageUrl" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_alignBottom="@+id/recipe_image"
+            android:layout_alignParentBottom="false"
+            android:layout_gravity="bottom"
+            android:background="#99FFFFFF"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/leftLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Duration"
+                    android:textColor="#AD313C"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textColor="#AD313C"
+                    android:textSize="16dp"
+                    android:textStyle="normal"
+                    local:MvxBind="Text Duration" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rightLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Difficulty"
+                    android:textColor="#AD313C"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    local:MvxBind="Text Difficulty"
+                    android:textColor="#AD313C"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/image_container">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#E0931D">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Ingredients"
+                android:id="@+id/ingridients"
+                android:textColor="#AD313C"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                local:MvxBind="Text IngredientsText"
+                android:id="@+id/ingridientsList"
+                android:layout_below="@id/ingridients"
+                android:textColor="#AD313C"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Method"
+                android:layout_below="@id/ingridientsList"
+                android:id="@+id/method"
+                android:textColor="#AD313C"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                local:MvxBind="Text Method"
+                android:layout_below="@id/method"
+                android:textColor="#AD313C"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<recipesBook.droid.views.SquareItem xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ffimageloading.cross.MvxCachedImageView
+        android:id="@+id/profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        local:MvxBind="ImagePath ImageUrl" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#99FFFFFF"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            local:MvxBind="Text Name"
+            android:textColor="#AD313C"
+            android:textStyle="bold"
+            android:textSize="16dp" />
+    </LinearLayout>
+</recipesBook.droid.views.SquareItem>
